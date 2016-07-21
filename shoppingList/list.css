@@ -1,0 +1,23 @@
+.main{
+	width: 400px;
+	margin: 0 auto;
+}
+
+.done-true{
+	text-decoration: line-through;
+	color: gray;	
+}
+
+.done-false{
+	text-decoration: underline;
+	color: red;
+}
+
+.inputText{
+	margin: 5px auto;
+	width: 300px;
+}
+
+.clearfix{
+	clear: both;
+}

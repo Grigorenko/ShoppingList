@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="shoppingList">
+<head>
+	<title>Shopping list</title>
+	<meta charset="utf-8">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="list.js"></script>
+	<link rel="stylesheet" type="text/css" href="list.css">
+</head>
+<body>
+
+	<dir class="main" ng-controller="ListCtrl">
+		
+		<h1>Shopping list</h1>
+		<span>Leave {{remain()}} from {{items.length}}</span>
+
+		<table>
+			<tbody>
+				<tr ng-repeat="item in items">
+					<td><input type="checkbox" ng-model="item.done"></td>
+					<td><span class="done-{{item.done}}">{{item.text}}</span></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<form ng-submit="addItem()">
+			<input type="text" ng-model="textItem" class="inputText" placeholder="Add purchase">
+			<div class="clearfix"></div>
+			<input type="submit" value="Add">
+		</form>
+
+	</dir>
+
+</body>
+</html>
